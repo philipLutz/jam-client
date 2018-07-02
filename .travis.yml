@@ -3,3 +3,10 @@ node_js: node
 cache:
   directories:
   - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: DZArGGQU6dlB5QpXlV++6dQqrGv+FlYaaNjWbmTDTrCt9PRo2raWGyUdJXdcDruGFkTgv1KzkWqB9SAfrKkhQI4CnUE1F4aokWcCjRhHHyxinv7tkec2SyjBUnVibwX8gDnOhlDAJ9lX9tHtMmUTTkbFC8Z5XgVTim0iEho2Bk4NNF1Ct4iyIALGyu0Ccx5SR5YoFerDEPSpFurX8aGzhkADBo6hKS2yevMbPOqGb8Sg8+/Z5TPf9Rbz5QGVdT6WwTz+K53Kt1PgAtAzgBeMBOUuRXLlDlBUvsjmLMV6xajA1lssjSvRz4wmtosZV9AFeGxVJQ/PcAbY35P8crg7c9uwuouCh6VXUjUJYdvsANp27hhqMXaN6k6bNFNNP5/TCWPjvqq2Asc8j7jkhfwQMmYwNzdEELmWCJUF8T1yYGVydWKEDHwF/0r8CvBh+1xWGuDkNNGiITwiKSNQjMu3PUepEjc56CvWfJKWu7nFUXSbEAp6ClVJnPOwIuWBbIFaUtmfc2C7Fwg+eCYtkzWSrUyRPBX5orsS1ZiR9iRVMg4hXZ78sOY7Wp8UoH3Rt4HR+2qaFVANdTk03R8GgdYWpBDnOHg+j9EZaB5X6ZYE+eGK4psecg5kUW/mTY3FXVgia/iyGmveAy0SISwaQSXM4KzvV0lohKJvlqXPDA/3R5Q=
+  app: immense-lake-65031
+  on:
+    repo: philipLutz/jam-client
