@@ -1,0 +1,22 @@
+import React from 'react';
+import { connect } from 'react-redux';
+import AboutSection from '../onboarding/AboutSection';
+import FeaturesSection from '../onboarding/FeaturesSection';
+import './OnboardingPage-style';
+
+export class OnboardingPage extends React.Component {
+	render() {
+		return (
+			<div className="onboarding-page">
+				<AboutSection />
+				<FeaturesSection />
+			</div>
+		);
+	}
+}
+
+const mapStateToProps = state => {
+	return {};
+};
+
+export default connect(mapStateToProps)(OnboardingPage);
