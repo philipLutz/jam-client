@@ -2,14 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 import AboutSection from '../onboarding/AboutSection';
 import FeaturesSection from '../onboarding/FeaturesSection';
+import WelcomeSection from '../onboarding/WelcomeSection';
 import './OnboardingPage-style';
 
 export class OnboardingPage extends React.Component {
 	render() {
 		return (
 			<div className="onboarding-page">
-				<AboutSection />
+				<WelcomeSection />
 				<FeaturesSection />
+				<AboutSection />
 			</div>
 		);
 	}
