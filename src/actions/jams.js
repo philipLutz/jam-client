@@ -85,7 +85,7 @@ export const newJam = (newJamObject) => (dispatch, getState) => {
 		.catch(err => dispatch(getJamError(err.message)));
 };
 
-export const editJam = (editJamObject, id) => (dispatch, getState) => {
+export const editJam = (id, editJamObject) => (dispatch, getState) => {
 	const authToken = getState().auth.authToken;
 	return fetch(`${API_BASE_URL}/jams/${id}`, {
 		method: 'PUT',
@@ -98,8 +98,8 @@ export const editJam = (editJamObject, id) => (dispatch, getState) => {
 		.then(res => {
 			return res.json();
 		})
-		.then(jam => {
-			return dispatch(editJamSuccess(jam));
+		.then(() => {
+			return dispatch(getJams());
 		})
 		.catch(err => dispatch(getJamError(err.message)));
 }
