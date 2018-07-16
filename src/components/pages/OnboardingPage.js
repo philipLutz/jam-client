@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import AboutSection from '../onboarding/AboutSection';
 import FeaturesSection from '../onboarding/FeaturesSection';
 import WelcomeSection from '../onboarding/WelcomeSection';
-import './OnboardingPage-style';
+import './OnboardingPage-style.css';
 
 export class OnboardingPage extends React.Component {
 	render() {

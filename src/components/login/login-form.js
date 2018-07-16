@@ -2,12 +2,12 @@ import React from 'react';
 import { Field, reduxForm, focus } from 'redux-form';
 import { Link } from 'react-router-dom';
 
-import Input from '../../commons/LoginInput';
+import Input from '../../commons/login-input';
 import { login } from '../../actions/auth';
 
 import { required, nonEmpty } from '../../validators';
 
-import './login-style'
+import './login-style.css';
 
 export class LoginForm extends React.Component {
 	onSubmit(values) {

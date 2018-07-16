@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import './WelcomeSection-style';
+import './WelcomeSection-style.css';
 
 export class WelcomeSection extends React.Component {
 	render() {

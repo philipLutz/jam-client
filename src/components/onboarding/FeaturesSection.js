@@ -1,6 +1,6 @@
 import React from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
-import './FeaturesSection-style';
+import './FeaturesSection-style.css';
 
 export default class FeaturesSection extends React.Component {
 	render() {

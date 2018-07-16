@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Redirect, Link } from 'react-router-dom';
 import { clearAuth } from '../../actions/auth';
 import { clearAuthToken } from '../../local-storage';
-import { clearJams } from '../../actionsjams';
+import { clearJams } from '../../actions/jams';
 
 export class Navbar extends React.Component {
 	logout() {

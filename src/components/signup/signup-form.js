@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom';
 
 import { registerUser } from '../../actions/users';
 import { login } from '../../actions/auth';
-import LoginInput from '../../commons/LoginInput';
+import LoginInput from '../../commons/login-input';
 import { required, nonEmpty, matches, length, isTrimmed } from '../../validators';
 
-import './signup-form-style';
+import './signup-form-style.css';
 
 const passwordLength = length({ min: 10, max: 72 });
 const matchesPassword = matches('password');
 
 export class SignupForm extends React.Component {
     onSubmit(values) {
-        const { username, password, firstName, lastName } = values;
+        const { username, password, firstName, lastName, bio } = values;
         const user = { username, password, firstName, lastName, bio };
         return this.props
             .dispatch(registerUser(user))

@@ -1,6 +1,6 @@
 import React from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
-import './AboutSection-style';
+import './AboutSection-style.css';
 
 export default class AboutSection extends React.Component {
 	render() {

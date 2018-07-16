@@ -1,20 +1,62 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-import Landing from './landing';
-import Home from './home';
+import {Route, withRouter} from 'react-router-dom';
+import { connect } from 'react-redux';
+import Navbar from './navigation/navigation';
+import LoginPage from './pages/LoginPage';
+// import AccountPage from './pages/AccountPage';
+import OnboardingPage from './pages/OnboardingPage';
+import SignupPage from './pages/SignupPage';
+// import BoardPage from './pages/BoardPage';
+import { refreshAuthToken } from '../actions/auth';
+import './app.css';
 
-export default function App(props) {
-    return (
-        <Router>
-            <div className="app">
-                <header>
-                    <h1><Link to="/">Jam</Link></h1>
-                </header>
-                <main>
-                    <Route exact path="/" component={Landing} />
-                    <Route exact path="/home" component={Home} />
-                </main>
+export class App extends React.Component {
+    componentDidUpdate(prevProps) {
+        if (!prevProps.loggedIn && this.props.loggedIn) {
+            this.startPeriodicRefresh();
+        } else if (prevProps.loggedIn && !this.props.loggedIn) {
+            this.stopPeriodicRefresh();
+        }
+    }
+    componentWillUnmount() {
+        this.stopPeriodicRefresh();
+    }
+    startPeriodicRefresh() {
+        this.refreshInterval = setInterval(
+            () => this.props.dispatch(refreshAuthToken()),
+            60 * 60 * 1000
+        );
+    }
+    stopPeriodicRefresh() {
+        if (!this.refreshInterval) {
+            return;
+        }
+        clearInterval(this.refreshInterval);
+    }
+
+    render() {
+        return (
+            <div className="wrapper">
+                <div className="app">
+                    <Navbar />
+                    <main className="content">
+                        <Route exact path="/" component={OnboardingPage} />
+                        <Route exact path="/login" component={LoginPage} />
+                        <Route exact path="/signup" component={SignupPage} />
+                    </main>
+                </div>
             </div>
-        </Router>
-    );
+        );
+    }
 }
+
+const mapStateToProps = state => ({
+    hasAuthToken: state.auth.authToken !== null,
+    loggedIn: state.auth.currentUser !== null
+});
+
+export default withRouter(connect(mapStateToProps)(App));
+
+
+
+
