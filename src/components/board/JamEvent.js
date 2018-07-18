@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { storeCurrentJam } from '../../actions/jams';
 import { getJamsSuccess } from '../../actions/jams';
+import { editJam } from '../../actions/jams';
+import { Link } from 'react-router-dom';
 
 export function JamEvent({
 	userHost,
@@ -11,7 +13,9 @@ export function JamEvent({
 	location,
 	instruments,
 	attendees,
-	id
+	id,
+	dispatch,
+	props
 }) {
 	return (
 		<section className="jam-results">

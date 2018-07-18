@@ -2,6 +2,7 @@ import React from 'react';
 import './JamBoard-style.css';
 import { connect } from 'react-redux';
 import { getJams } from '../../actions/jams';
+import JamEvent from './JamEvent';
 
 
 
