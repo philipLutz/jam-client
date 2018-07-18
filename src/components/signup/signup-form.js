@@ -35,6 +35,8 @@ export class SignupForm extends React.Component {
                 <Field className="fields-and-labels" component={LoginInput} type="text" name="lastName" />
                 <label className="fields-and-labels" htmlFor="bio">Bio</label>
                 <Field className="fields-and-labels" component={LoginInput} type="text" name="bio" />
+                <label className="fields-and-labels" htmlFor="email">Email</label>
+                <Field className="fields-and-labels" component={LoginInput} type="email" name="email" />
                 <label className="fields-and-labels" htmlFor="username">Username</label>
                 <Field
                     className="fields-and-labels"
