@@ -6,7 +6,7 @@ import LoginPage from './pages/LoginPage';
 // import AccountPage from './pages/AccountPage';
 import OnboardingPage from './pages/OnboardingPage';
 import SignupPage from './pages/SignupPage';
-// import BoardPage from './pages/BoardPage';
+import BoardPage from './pages/BoardPage';
 import { refreshAuthToken } from '../actions/auth';
 import './app.css';
 
@@ -43,6 +43,7 @@ export class App extends React.Component {
                         <Route exact path="/" component={OnboardingPage} />
                         <Route exact path="/login" component={LoginPage} />
                         <Route exact path="/signup" component={SignupPage} />
+                        <Route exact path="/board" component={BoardPage} />
                     </main>
                 </div>
             </div>
