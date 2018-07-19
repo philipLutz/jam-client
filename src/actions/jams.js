@@ -72,6 +72,46 @@ export const getJams = () => (dispatch, getState) => {
 		.catch(err => dispatch(getJamError(err.message)));
 };
 
+export const getAttendJams = (username) => (dispatch, getState) => {
+	dispatch(getJamRequest)
+	const authToken = getState().auth.authToken;
+	return fetch(`${API_BASE_URL}/jams/${username}`, {
+		method: 'GET',
+		headers: {
+			'content-type': 'application/json',
+			Authorization: `Bearer ${authToken}`
+		}
+	})
+		.then(res => {
+		return res.json();
+	})
+		.then(jams => {
+			dispatch(clearJams())
+			return dispatch(getJamsSuccess(jams))
+		})
+		.catch(err => dispatch(getJamError(err.message)));
+};
+
+export const getSpecificJams = (id) => (dispatch, getState) => {
+	dispatch(getJamRequest)
+	const authToken = getState().auth.authToken;
+	return fetch(`${API_BASE_URL}/jams/${id}`, {
+		method: 'GET',
+		headers: {
+			'content-type': 'application/json',
+			Authorization: `Bearer ${authToken}`
+		}
+	})
+		.then(res => {
+		return res.json();
+	})
+		.then(jam => {
+			dispatch(clearJams())
+			return dispatch(getJamsSuccess(jam))
+		})
+		.catch(err => dispatch(getJamError(err.message)));
+};
+
 export const newJam = (newJamObject) => (dispatch, getState) => {
 	const authToken = getState().auth.authToken;
 	return fetch(`${API_BASE_URL}/jams`, {

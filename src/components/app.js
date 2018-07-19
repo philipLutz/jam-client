@@ -3,7 +3,7 @@ import {Route, withRouter} from 'react-router-dom';
 import { connect } from 'react-redux';
 import Navbar from './navigation/navigation';
 import LoginPage from './pages/LoginPage';
-// import AccountPage from './pages/AccountPage';
+import AccountPage from './pages/AccountPage';
 import OnboardingPage from './pages/OnboardingPage';
 import SignupPage from './pages/SignupPage';
 import BoardPage from './pages/BoardPage';
@@ -40,7 +40,7 @@ export class App extends React.Component {
                 <div className="app">
                     <Navbar />
                     <main className="content">
-                        <Route exact path="/" component={OnboardingPage} />
+                        <Route exact path="/home" component={OnboardingPage} />
                         <Route exact path="/login" component={LoginPage} />
                         <Route exact path="/signup" component={SignupPage} />
                         <Route exact path="/board" component={BoardPage} />

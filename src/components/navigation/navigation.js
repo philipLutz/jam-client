@@ -20,17 +20,17 @@ export class Navbar extends React.Component {
 
 		if (this.props.loggedIn) {
 			logOutButton = (
-				<a className="logout-button" onClick={() => this.logOut()}>Log Out</a>
+				<button className="logout-button" onClick={() => this.logout()} to="/home">Log Out</button>
 			);
 			accountButton = (
-				<li><Link to="/account">Account</Link></li>
+				<button><Link to="/account">Account</Link></button>
 			);
 		} else {
 			loginButton = (
-				<li><Link to="/login">Login</Link></li>
+				<button><Link to="/login">Login</Link></button>
 			);
 			signupButton = (
-				<li><Link to="/signup">Sign Up</Link></li>
+				<button><Link to="/signup">Sign Up</Link></button>
 			);
 		}
 
@@ -38,13 +38,12 @@ export class Navbar extends React.Component {
 			<React.Fragment>
 				<header className="navbar">
 					<nav className="navigation">
-						<div className="logo"><Link className="logo" to="/">Jam</Link></div>
+						<div className="logo"><Link className="logo" to="/board">Jam</Link></div>
 						<div className="navigation-items">
 							<ul>
 								{accountButton}
 								{loginButton}
 								{signupButton}
-								{!this.props.loggedIn ? <Redirect to="/" /> : ''}
 								{logOutButton}
 							</ul>
 						</div>
