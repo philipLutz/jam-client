@@ -56,8 +56,6 @@ export const login = (username, password) => dispatch => {
                 password
             })
         })
-            // Reject any requests which don't return a 200 status, creating
-            // errors which follow a consistent format
             .then(res => normalizeResponseErrors(res))
             .then(res => res.json())
             .then(({authToken}) => storeAuthInfo(authToken, dispatch))
@@ -68,8 +66,6 @@ export const login = (username, password) => dispatch => {
                         ? 'Incorrect username or password'
                         : 'Unable to login, please try again';
                 dispatch(authError(err));
-                // Could not authenticate, so return a SubmissionError for Redux
-                // Form
                 return Promise.reject(
                     new SubmissionError({
                         _error: message
