@@ -6,13 +6,15 @@ import AttendEvent from './AttendEvent';
 
 export class AttendBoard extends React.Component {
 
-	state: {
-		loggedIn: state.auth.currentUser.username
+	constructor(props) {
+		super(props);
+		this.state = {
+			username: props.auth.currentUser
+		}
 	}
 
-	componentDidMount() {
-		const { loggedIn } = this.props
-		this.props.dispatch(getAttendJams(loggedIn))
+	componentDidMount(props) {
+		props.dispatch(getAttendJams(this.username));
 	}
 	render() {
 		if (this.props.loading) {

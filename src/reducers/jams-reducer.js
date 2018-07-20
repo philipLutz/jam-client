@@ -2,7 +2,7 @@ import {GET_JAM_REQUEST,
 		CLEAR_JAMS, 
 		GET_JAMS_SUCCESS, 
 		GET_JAM_ERROR, 
-		ADD_JAM_SUCCESS, 
+		ADD_JAM_SUCCESS,
 		EDIT_JAM_SUCCESS} from '../actions/jams';
 
 const initialState = {

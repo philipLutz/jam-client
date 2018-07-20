@@ -44,6 +44,7 @@ export class App extends React.Component {
                         <Route exact path="/login" component={LoginPage} />
                         <Route exact path="/signup" component={SignupPage} />
                         <Route exact path="/board" component={BoardPage} />
+                        <Route exact path="/account" component={AccountPage} />
                     </main>
                 </div>
             </div>

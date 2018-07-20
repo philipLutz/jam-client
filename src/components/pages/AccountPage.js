@@ -1,14 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './AccountPage-style.css';
-import AttendBoard from '../account/AttendBoard';
+import AddJamForm from '../account/AddJamForm';
+// import AttendBoard from '../account/AttendBoard';
 
 export class AccountPage extends React.Component {
 	render() {
 		if (this.props.loggedIn) {
 			return (
 				<div className="board-page">
-					<AttendBoard />
+					<AddJamForm />
 				</div>
 			);
 		}
