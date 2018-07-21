@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './AccountPage-style.css';
 import AddJamForm from '../account/AddJamForm';
-// import AttendBoard from '../account/AttendBoard';
+import AttendBoard from '../account/AttendBoard';
 
 export class AccountPage extends React.Component {
 	render() {
@@ -10,6 +10,7 @@ export class AccountPage extends React.Component {
 			return (
 				<div className="board-page">
 					<AddJamForm />
+					<AttendBoard />
 				</div>
 			);
 		}

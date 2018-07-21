@@ -9,12 +9,12 @@ export class AttendBoard extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			username: props.auth.currentUser
+			username: props.loggedIn.username
 		}
 	}
 
 	componentDidMount(props) {
-		props.dispatch(getAttendJams(this.username));
+		this.props.dispatch(getAttendJams(this.state.username));
 	}
 	render() {
 		if (this.props.loading) {
@@ -39,6 +39,7 @@ export class AttendBoard extends React.Component {
 			)
 		}
 		else {
+			console.log(this.props)
 			return (
 				<section className="jam-board">
 					{this.props.jams.map(obj => (
@@ -60,7 +61,7 @@ const mapStateToProps = state => ({
 	loading: state.jams.loading,
 	error: state.jams.error,
 	empty: state.jams.empty,
-	loggedIn: state.auth.currentUser !== null
+	loggedIn: state.auth.currentUser || ''
 });
 
 export default connect(mapStateToProps)(AttendBoard);

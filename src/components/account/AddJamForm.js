@@ -8,28 +8,6 @@ import './AddJamForm-style.css'
 
 export class AddJamForm extends React.Component {
 
-  // constructor() {
-  //   super()
-
-  //   this.state = {
-  //     jamDate: '',
-  //     jamTime: '',
-  //     style: '',
-  //     location: '',
-  //     instruments: ''
-  //   }
-  // }
-
-  // handleSubmit = () => {
-  //   this.props.dispatch({
-  //     jamDate: this.state.jamDate,
-  //     jamTime: this.state.jamTime,
-  //     style: this.state.style,
-  //     location: this.state.location,
-  //     instruments: this.state.instruments
-  //   })
-  // }
-
   onSubmit(values) {
     this.props.dispatch(newJam(values));
   }

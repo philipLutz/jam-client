@@ -7,10 +7,18 @@ import AccountPage from './pages/AccountPage';
 import OnboardingPage from './pages/OnboardingPage';
 import SignupPage from './pages/SignupPage';
 import BoardPage from './pages/BoardPage';
-import { refreshAuthToken } from '../actions/auth';
+import { refreshAuthToken, storeAuthInfo } from '../actions/auth';
 import './app.css';
 
 export class App extends React.Component {
+
+    componentDidMount() {
+        const token = localStorage.getItem('authToken');
+        if (token) {
+            storeAuthInfo(token, this.props.dispatch)
+        }
+    }
+
     componentDidUpdate(prevProps) {
         if (!prevProps.loggedIn && this.props.loggedIn) {
             this.startPeriodicRefresh();
