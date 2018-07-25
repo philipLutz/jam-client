@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Moment from 'react-moment';
 import { editJam } from '../../actions/jams';
-
+import { deleteJam } from '../../actions/jams';
 import './AttendEvent-style.css';
 
 export function AttendEvent({
@@ -39,10 +39,15 @@ export function AttendEvent({
 							instruments,
 							attendees: props.loggedIn.username
 						}
-						console.log(_id);
 						dispatch(editJam(_id, attendJamObj))
 					}}
 				>Attend Jam</button>
+				<button
+					className="delete-jam"
+					onClick={() => {
+						dispatch(deleteJam(_id))
+					}}
+				>Delete Jam</button>
 			</div>
 		</section>
 	);
