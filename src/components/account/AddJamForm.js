@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { reduxForm, Field } from 'redux-form';
-import { newJam } from '../../actions/jams'
+import { newJam } from '../../actions/jams';
+import { renderDatePicker } from '../../commons/renderDatePicker';
+
 
 import './AddJamForm-style.css'
 
@@ -18,7 +20,7 @@ export class AddJamForm extends React.Component {
       <div>
            <form onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
             <label htmlFor="jamDate">Date</label>
-            <Field name="jamDate" id="jamDate" type="text" component="input" />
+            <Field name="jamDate" id="jamDate" type="text" component={renderDatePicker} />
             <label htmlFor="jamTime">Time</label>
             <Field name="jamTime" id="jamTime" type="text" component="input" />
             <label htmlFor="style">Style</label>

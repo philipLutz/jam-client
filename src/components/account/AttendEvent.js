@@ -1,9 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { storeCurrentJam } from '../../actions/jams';
-import { getJamsSuccess } from '../../actions/jams';
+import Moment from 'react-moment';
 import { editJam } from '../../actions/jams';
-import { Link } from 'react-router-dom';
+
 import './AttendEvent-style.css';
 
 export function AttendEvent({
@@ -14,7 +13,7 @@ export function AttendEvent({
 	location,
 	instruments,
 	attendees,
-	id,
+	_id,
 	dispatch,
 	props
 }) {
@@ -23,27 +22,11 @@ export function AttendEvent({
 			<div className="jam-container">
 				<h3 className="style">{style}</h3>
 				<ul className="jam-time">
-					<li>{jamDate}</li>
+					<li><Moment format="MMMM-D-YYYY">{jamDate}</Moment></li>
 					<li>{jamTime}</li>
+					<li>{location}</li>
+					<li>{instruments}</li>
 				</ul>
-				<Link to='/jam-about'>
-					<button 
-						className="jam-details"
-						onClick={() => {
-							const currentJamObj = {
-								userHost,
-								jamDate,
-								jamTime,
-								style,
-								location,
-								instruments,
-								attendees,
-								id
-							}
-							dispatch(storeCurrentJam(currentJamObj))
-						}}
-					>Details</button>
-				</Link>
 				<button
 					className="attend-jam"
 					onClick={() => {
@@ -54,9 +37,10 @@ export function AttendEvent({
 							style,
 							location,
 							instruments,
-							attendees: props.currentUser.username
+							attendees: props.loggedIn.username
 						}
-						dispatch(editJam(this.props.jams.id, attendJamObj))
+						console.log(_id);
+						dispatch(editJam(_id, attendJamObj))
 					}}
 				>Attend Jam</button>
 			</div>

@@ -39,7 +39,7 @@ export class AttendBoard extends React.Component {
 			)
 		}
 		else {
-			console.log(this.props)
+			// console.log(this.props);
 			return (
 				<section className="jam-board">
 					{this.props.jams.map(obj => (
@@ -47,7 +47,7 @@ export class AttendBoard extends React.Component {
 							{...obj}
 							dispatch={this.props.dispatch}
 							props={this.props}
-							key={String(obj.id)}
+							key={String(obj._id)}
 						/>
 					))}
 				</section>
