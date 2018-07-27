@@ -17,7 +17,6 @@ export function HostEvent({
 	dispatch,
 	props
 }) {
-	//edit button links to EditJamForm component
 	return (
 		<section className="jam-results">
 			<div className="jam-container">

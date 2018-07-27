@@ -7,9 +7,19 @@ import JamEvent from './JamEvent';
 
 
 export class JamBoard extends React.Component {
+	
+	constructor(props) {
+		super(props);
+		this.state = {
+			username: props.loggedIn.username
+		}
+	}
+
 	componentDidMount() {
 		this.props.dispatch(getJams())
+		console.log(this.props);
 	}
+	
 	render() {
 		if (this.props.loading) {
 			return (
@@ -54,7 +64,7 @@ const mapStateToProps = state => ({
 	loading: state.jams.loading,
 	error: state.jams.error,
 	empty: state.jams.empty,
-	loggedIn: state.auth.currentUser !== null
+	loggedIn: state.auth.currentUser || ''
 });
 
 export default connect(mapStateToProps)(JamBoard);

@@ -56,7 +56,6 @@ export class App extends React.Component {
                         <Route exact path="/board" component={BoardPage} />
                         <Route exact path="/account" component={AccountPage} />
                         <Route exact path="/addForm" component={AddFormPage} />
-                        <Route exact path="/editForm" component={EditFormPage} />
                     </main>
                 </div>
             </div>

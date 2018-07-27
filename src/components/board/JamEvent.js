@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { editJam } from '../../actions/jams';
 import Moment from 'react-moment';
+import './JamEvent-style.css';
 
 export function JamEvent({
 	userHost,
@@ -37,6 +38,7 @@ export function JamEvent({
 							instruments,
 							attendees: props.loggedIn.username
 						}
+						console.log(_id, attendJamObj);
 						dispatch(editJam(_id, attendJamObj))
 					}}
 				>Interested?</button>

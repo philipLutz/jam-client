@@ -1,7 +1,7 @@
 import React from 'react';
 import './HostBoard-style.css';
 import { connect } from 'react-redux';
-import { getAttendJams } from '../../actions/jams';
+import { getJams } from '../../actions/jams';
 import HostEvent from './HostEvent';
 
 export class HostBoard extends React.Component {
@@ -14,7 +14,8 @@ export class HostBoard extends React.Component {
 	}
 
 	componentDidMount(props) {
-		this.props.dispatch(getAttendJams(this.state.username));
+		this.props.dispatch(getJams());
+		console.log(this.props.jams, this.props.loggedIn.username);
 	}
 	render() {
 		if (this.props.loading) {
@@ -38,7 +39,8 @@ export class HostBoard extends React.Component {
 				</div>
 			)
 		}
-		if (this.props.jams.userHost === this.props.username) {
+		if (this.props.jams.userHost === this.props.loggedIn.username) {
+			
 			return (
 				<section className="jam-board">
 					{this.props.jams.map(obj => (
@@ -50,6 +52,13 @@ export class HostBoard extends React.Component {
 						/>
 					))}
 				</section>
+			)
+		}
+		else {
+			return (
+				<div className="no-jams">
+					<div>You are not hosting any jams.</div>
+				</div>
 			)
 		}
 	} 
