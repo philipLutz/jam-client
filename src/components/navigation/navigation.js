@@ -1,7 +1,7 @@
 import React from 'react';
 import './navigation.css';
 import { connect } from 'react-redux';
-import { Redirect, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { clearAuth } from '../../actions/auth';
 import { clearAuthToken } from '../../local-storage';
 import { clearJams } from '../../actions/jams';
@@ -17,6 +17,7 @@ export class Navbar extends React.Component {
 		let accountButton;
 		let loginButton;
 		let signupButton;
+		let addFormButton;
 
 		if (this.props.loggedIn) {
 			logOutButton = (
@@ -24,6 +25,9 @@ export class Navbar extends React.Component {
 			);
 			accountButton = (
 				<button><Link to="/account">Account</Link></button>
+			);
+			addFormButton = (
+				<button><Link to="/addForm">Host a Jam</Link></button>
 			);
 		} else {
 			loginButton = (
@@ -42,6 +46,7 @@ export class Navbar extends React.Component {
 						<div className="navigation-items">
 							<ul>
 								{accountButton}
+								{addFormButton}
 								{loginButton}
 								{signupButton}
 								{logOutButton}

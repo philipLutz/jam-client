@@ -1,10 +1,10 @@
 import React from 'react';
-import './AttendBoard-style.css';
+import './HostBoard-style.css';
 import { connect } from 'react-redux';
 import { getAttendJams } from '../../actions/jams';
-import AttendEvent from './AttendEvent';
+import HostEvent from './HostEvent';
 
-export class AttendBoard extends React.Component {
+export class HostBoard extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -34,15 +34,15 @@ export class AttendBoard extends React.Component {
 		if (this.props.empty === true || this.props.jams.length === 0) {
 			return (
 				<div className="empty">
-					<div>You are not attending any Jams</div>
+					<div>You have not created any Jams</div>
 				</div>
 			)
 		}
-		else {
+		if (this.props.jams.userHost === this.props.username) {
 			return (
 				<section className="jam-board">
 					{this.props.jams.map(obj => (
-						<AttendEvent
+						<HostEvent
 							{...obj}
 							dispatch={this.props.dispatch}
 							props={this.props}
@@ -50,7 +50,7 @@ export class AttendBoard extends React.Component {
 						/>
 					))}
 				</section>
-			);
+			)
 		}
 	} 
 }
@@ -63,4 +63,4 @@ const mapStateToProps = state => ({
 	loggedIn: state.auth.currentUser || ''
 });
 
-export default connect(mapStateToProps)(AttendBoard);
+export default connect(mapStateToProps)(HostBoard);

@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Moment from 'react-moment';
-import './AttendEvent-style.css';
+import { editJam } from '../../actions/jams';
+import { deleteJam } from '../../actions/jams';
+import './HostEvent-style.css';
 
-export function AttendEvent({
+export function HostEvent({
 	userHost,
 	jamDate,
 	jamTime,
@@ -15,6 +17,7 @@ export function AttendEvent({
 	dispatch,
 	props
 }) {
+	//edit button links to EditJamForm component
 	return (
 		<section className="jam-results">
 			<div className="jam-container">
@@ -25,9 +28,18 @@ export function AttendEvent({
 					<li>{location}</li>
 					<li>{instruments}</li>
 				</ul>
+				<button
+					className="edit-jam-button"
+				>Edit Jam</button>
+				<button
+					className="delete-jam-button"
+					onClick={() => {
+						dispatch(deleteJam(_id))
+					}}
+				>Delete Jam</button>
 			</div>
 		</section>
 	);
 }
 
-export default connect()(AttendEvent);
+export default connect()(HostEvent);

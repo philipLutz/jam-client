@@ -40,7 +40,7 @@ export class JamBoard extends React.Component {
 							{...obj}
 							dispatch={this.props.dispatch}
 							props={this.props}
-							key={String(obj.id)}
+							key={String(obj._id)}
 						/>
 					))}
 				</section>

@@ -46,12 +46,6 @@ export const editJamSuccess = (jam) => {
 	};
 };
 
-export const STORE_CURRENT_JAM = 'STORE_CURRENT_JAM';
-export const storeCurrentJam = (currentJamObj) => ({
-    type: STORE_CURRENT_JAM,
-    currentJamObj
-});
-
 export const getJams = () => (dispatch, getState) => {
 	dispatch(getJamRequest)
 	const authToken = getState().auth.authToken;
@@ -143,6 +137,9 @@ export const editJam = (id, editJamObject) => (dispatch, getState) => {
 	})
 		.then(res => {
 			return res.json();
+		})
+		.then(res => {
+			return dispatch(editJamSuccess(res));
 		})
 		.then(() => {
 			return dispatch(getJams());

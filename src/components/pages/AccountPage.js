@@ -1,16 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './AccountPage-style.css';
-import AddJamForm from '../account/AddJamForm';
 import AttendBoard from '../account/AttendBoard';
+import HostBoard from '../account/HostBoard';
 
 export class AccountPage extends React.Component {
 	render() {
 		if (this.props.loggedIn) {
 			return (
-				<div className="board-page">
-					<AddJamForm />
-					<AttendBoard />
+				<div className="account-page">
+					<section className="host-section">
+						<h3>Hosted Jams</h3>
+						<HostBoard />
+					</section>
+					<section className="attend-section">
+						<h3>Interesting Jams</h3>
+						<AttendBoard />
+					</section>
 				</div>
 			);
 		}
