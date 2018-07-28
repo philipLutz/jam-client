@@ -8,7 +8,6 @@ import OnboardingPage from './pages/OnboardingPage';
 import SignupPage from './pages/SignupPage';
 import BoardPage from './pages/BoardPage';
 import AddFormPage from './pages/AddFormPage';
-import EditFormPage from './pages/EditFormPage';
 import { refreshAuthToken, storeAuthInfo } from '../actions/auth';
 import './app.css';
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Moment from 'react-moment';
-import { editJam } from '../../actions/jams';
 import { deleteJam } from '../../actions/jams';
 import './HostEvent-style.css';
 
@@ -27,9 +26,6 @@ export function HostEvent({
 					<li>{location}</li>
 					<li>{instruments}</li>
 				</ul>
-				<button
-					className="edit-jam-button"
-				>Edit Jam</button>
 				<button
 					className="delete-jam-button"
 					onClick={() => {

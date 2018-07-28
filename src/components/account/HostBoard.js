@@ -1,7 +1,7 @@
 import React from 'react';
 import './HostBoard-style.css';
 import { connect } from 'react-redux';
-import { getJams } from '../../actions/jams';
+import { getAttendJams } from '../../actions/jams';
 import HostEvent from './HostEvent';
 
 export class HostBoard extends React.Component {
@@ -9,15 +9,28 @@ export class HostBoard extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			username: props.loggedIn.username
+			username: props.loggedIn.username,
+			jams: props.jams.jams
 		}
 	}
 
 	componentDidMount(props) {
-		this.props.dispatch(getJams());
-		console.log(this.props.jams, this.props.loggedIn.username);
+		this.props.dispatch(getAttendJams(this.state.username));
 	}
 	render() {
+		let userHost = this.props.jams.map((jam) => {
+			if (jam.userHost === this.props.loggedIn.username) {
+				return (
+					<section className="jam-board" key={String(jam._id)}>
+						<HostEvent
+							{...jam}
+							dispatch={this.props.dispatch}
+							props={this.props}
+						/>
+					</section>
+				);
+			}
+		})
 		if (this.props.loading) {
 			return (
 				<div className="loading">
@@ -39,28 +52,18 @@ export class HostBoard extends React.Component {
 				</div>
 			)
 		}
-		if (this.props.jams.userHost === this.props.loggedIn.username) {
-			
-			return (
-				<section className="jam-board">
-					{this.props.jams.map(obj => (
-						<HostEvent
-							{...obj}
-							dispatch={this.props.dispatch}
-							props={this.props}
-							key={String(obj._id)}
-						/>
-					))}
-				</section>
-			)
-		}
 		else {
 			return (
-				<div className="no-jams">
-					<div>You are not hosting any jams.</div>
+				<div>
+					{userHost}
 				</div>
 			)
 		}
+		return (
+			<div>
+				
+			</div>
+		)
 	} 
 }
 

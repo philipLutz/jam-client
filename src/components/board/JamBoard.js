@@ -16,8 +16,7 @@ export class JamBoard extends React.Component {
 	}
 
 	componentDidMount() {
-		this.props.dispatch(getJams())
-		console.log(this.props);
+		this.props.dispatch(getJams());
 	}
 	
 	render() {
