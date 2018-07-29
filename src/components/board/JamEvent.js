@@ -38,7 +38,6 @@ export function JamEvent({
 							instruments,
 							attendees: props.loggedIn.username
 						}
-						console.log(_id, attendJamObj);
 						dispatch(editJam(_id, attendJamObj))
 					}}
 				>Interested?</button>

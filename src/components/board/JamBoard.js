@@ -4,14 +4,13 @@ import { connect } from 'react-redux';
 import { getJams } from '../../actions/jams';
 import JamEvent from './JamEvent';
 
-
-
 export class JamBoard extends React.Component {
 	
 	constructor(props) {
 		super(props);
 		this.state = {
-			username: props.loggedIn.username
+			username: props.loggedIn.username,
+			jams: props.jams.jams
 		}
 	}
 
@@ -20,6 +19,30 @@ export class JamBoard extends React.Component {
 	}
 	
 	render() {
+		let newJam = this.props.jams.map((jam) => {
+			let jamsArray = [];
+			let jamAttendeesArray = [];
+			if (jam.attendees !== null) {
+				jamsArray.push(jam);
+			}
+			if (jamsArray.length > 0) {
+				jamAttendeesArray.push(jamsArray[0].attendees);
+			}
+			if (jamAttendeesArray.length > 0) {
+				if (jamAttendeesArray[0].indexOf(this.props.loggedIn.username) === -1) {
+					console.log(jam);
+					return (
+						<section className="jam-board"key={String(jam._id)}>
+								<JamEvent
+									{...jam}
+									dispatch={this.props.dispatch}
+									props={this.props}
+								/>
+						</section>
+					);
+				}	
+			}
+		})
 		if (this.props.loading) {
 			return (
 				<div className="loading">
@@ -42,19 +65,16 @@ export class JamBoard extends React.Component {
 			)
 		}
 		else {
+			
 			return (
-				<section className="jam-board">
-					{this.props.jams.map(obj => (
-						<JamEvent
-							{...obj}
-							dispatch={this.props.dispatch}
-							props={this.props}
-							key={String(obj._id)}
-						/>
-					))}
-				</section>
+				<div>
+					{newJam}
+				</div>
 			);
 		}
+		return (
+			<div></div>
+		);
 	} 
 }
 
