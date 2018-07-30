@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { editJam } from '../../actions/jams';
 import Moment from 'react-moment';
 import './JamEvent-style.css';
@@ -40,7 +41,7 @@ export function JamEvent({
 						}
 						dispatch(editJam(_id, attendJamObj))
 					}}
-				>Interested?</button>
+				><Link to="/account">Interested?</Link></button>
 			</div>
 		</section>
 	);

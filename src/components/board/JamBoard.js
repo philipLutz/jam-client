@@ -30,7 +30,6 @@ export class JamBoard extends React.Component {
 			}
 			if (jamAttendeesArray.length > 0) {
 				if (jamAttendeesArray[0].indexOf(this.props.loggedIn.username) === -1) {
-					console.log(jam);
 					return (
 						<section className="jam-board"key={String(jam._id)}>
 								<JamEvent

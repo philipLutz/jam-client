@@ -8,7 +8,7 @@ import './AddJamForm-style.css'
 export class AddJamForm extends React.Component {
 
   onSubmit(values) {
-    this.props.dispatch(newJam(values));
+    this.props.dispatch(newJam(values))
   }
 
   render() {

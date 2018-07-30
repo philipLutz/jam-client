@@ -120,7 +120,8 @@ export const newJam = (newJamObject) => (dispatch, getState) => {
 			return res.json();
 		})
 		.then(jam => {
-			return dispatch(addJamSuccess(jam));
+			dispatch(addJamSuccess(jam))
+			window.location = '/account';
 		})
 		.catch(err => dispatch(getJamError(err.message)));
 };
@@ -139,7 +140,7 @@ export const editJam = (id, editJamObject) => (dispatch, getState) => {
 			return res.json();
 		})
 		.then(() => {
-			return dispatch(getJams());
+			window.location = '/board';
 		})
 		.catch(err => dispatch(getJamError(err.message)));
 }

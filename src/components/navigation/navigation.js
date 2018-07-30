@@ -21,7 +21,9 @@ export class Navbar extends React.Component {
 
 		if (this.props.loggedIn) {
 			logOutButton = (
-				<button className="logout-button" onClick={() => this.logout()} to="/home">Log Out</button>
+				<button className="logout-button" onClick={() => this.logout()}>
+					<Link to="/home">Log Out</Link>
+				</button>
 			);
 			accountButton = (
 				<button><Link to="/account">Account</Link></button>
