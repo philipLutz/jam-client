@@ -9,6 +9,7 @@
     "moment": "^2.22.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
+    "react-burger-menu": "^2.5.2",
     "react-datepicker": "^1.5.0",
     "react-dom": "^16.4.1",
     "react-moment": "^0.7.9",
