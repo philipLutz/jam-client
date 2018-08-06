@@ -9,7 +9,7 @@ export function SignupPage(props) {
 		return <Redirect to="/" />;
 	}
 	return (
-		<div className="home">
+		<div className="signup-page">
 			<SignupForm />
 		</div>
 	);

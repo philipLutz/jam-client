@@ -9,7 +9,9 @@ export class OnboardingPage extends React.Component {
 	render() {
 		return (
 			<div className="onboarding-page">
-				<WelcomeSection />
+				<div className="image">
+					<WelcomeSection />
+				</div>
 				<FeaturesSection />
 				<AboutSection />
 			</div>

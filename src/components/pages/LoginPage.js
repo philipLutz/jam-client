@@ -10,7 +10,7 @@ export function LoginPage(props) {
 	}
 
 	return (
-		<div className="home">
+		<div className="login-page">
 			<LoginForm />
 		</div>
 	);

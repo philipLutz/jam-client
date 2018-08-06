@@ -1,0 +1,11 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+.image {
+	background-image: url("https://corandemphotography.files.wordpress.com/2011/01/punchbrothers121210_65.jpg");
+	background-size: cover;
+	color: #B5E2FA;
+	height: 47vh;
+}
