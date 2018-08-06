@@ -34,12 +34,12 @@ h3 {
 }
 
 .features {
-	height: 120vh;
+	height: 110vh;
 	text-align: center;
 }
 
 .about {
-	height: 120vh;
+	height: 100vh;
 	text-align: center;
 }
 
@@ -48,11 +48,11 @@ a {
 }
 
 a:link {
-	color: #0FA3B1;
+	color: #B5E2FA;
 }
 
 a:visited {
-	color: #0FA3B1;
+	color: #B5E2FA;
 }
 
 a:hover {
