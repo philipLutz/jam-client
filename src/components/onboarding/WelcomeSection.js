@@ -26,7 +26,7 @@ export class WelcomeSection extends React.Component {
 					<h1 className="title">Jam</h1>
 					<h3 className="sub-title">{dialog}</h3>
 				</div>
-				<div>{buttons}</div>
+				<div className="buttons">{buttons}</div>
 			</section>
 		);
 	}

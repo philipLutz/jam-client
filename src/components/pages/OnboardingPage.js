@@ -12,8 +12,12 @@ export class OnboardingPage extends React.Component {
 				<div className="image">
 					<WelcomeSection />
 				</div>
-				<FeaturesSection />
-				<AboutSection />
+				<div className="features">
+					<FeaturesSection />
+				</div>
+				<div className="about">
+					<AboutSection />
+				</div>
 			</div>
 		);
 	}

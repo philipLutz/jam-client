@@ -1,0 +1,25 @@
+.title-features {
+	font-size: 13vw;
+	background-image: url("https://s3.amazonaws.com/allaboutjazz/media/large/7/c/1/39b5449acb3c5b7303fd418e76d00.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #B5E2FA;
+	text-align: center;
+	height: 100vw;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0;
+	color: black;
+	font-size: 7vw;
+	padding: 1vw;
+}
+
+li {
+	padding: 1.5vw;
+}
+
+.button-container {
+	font-size: 6vw;
+}

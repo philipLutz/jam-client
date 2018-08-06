@@ -7,16 +7,16 @@ export default class FeaturesSection extends React.Component {
 		return (
 			<ScrollableAnchor id={'features'}>
 				<section className="features-section">
-					<h2 className="title">Features</h2>
+					<h2 className="title-features">Features</h2>
 					<div className="features-container">
 						<ul>
 							<li>Find Jam Sessions</li>
 							<li>Host Your Own Events</li>
 							<li>Keep Track of Your Schedule</li>
 						</ul>
-					</div>
-					<div className="button-container">
-						<a href='#about' className="about-button">About</a>
+						<div className="button-container">
+							<a href='#about' className="about-button">About</a>
+						</div>
 					</div>
 				</section>
 			</ScrollableAnchor>

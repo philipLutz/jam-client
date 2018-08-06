@@ -10,3 +10,15 @@
 .navbar button {
 	background-color: #0FA3B1;
 }
+
+.navbar a:link {
+	color: black;
+}
+
+.navbar a:visited {
+	color: black;
+}
+
+.navbar a:hover {
+	color: #F7A072;
+}

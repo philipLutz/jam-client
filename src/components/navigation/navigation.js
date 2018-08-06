@@ -18,6 +18,7 @@ export class Navbar extends React.Component {
 		let loginButton;
 		let signupButton;
 		let addFormButton;
+		let jamButton;
 
 		if (this.props.loggedIn) {
 			logOutButton = (
@@ -31,7 +32,13 @@ export class Navbar extends React.Component {
 			addFormButton = (
 				<button><Link to="/addForm">Host a Jam</Link></button>
 			);
+			jamButton = (
+				<div className="logo"><Link className="logo" to="/board">Jam</Link></div>
+			);
 		} else {
+			jamButton = (
+				<div className="logo"><Link className="logo" to="/home">Jam</Link></div>
+			);
 			loginButton = (
 				<button><Link to="/login">Login</Link></button>
 			);
@@ -44,7 +51,7 @@ export class Navbar extends React.Component {
 			<React.Fragment>
 				<header className="navbar">
 					<nav className="navigation">
-						<div className="logo"><Link className="logo" to="/board">Jam</Link></div>
+						{jamButton}
 						<div className="navigation-items">
 							<ul>
 								{accountButton}
