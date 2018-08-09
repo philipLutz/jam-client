@@ -1,0 +1,28 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+.login-page {
+	background-color: #F7A072;
+	height: 100vh;
+	text-align: center;
+}
+
+h1 {
+	font-size: 13vw;
+	padding-top: 7vw;
+}
+
+.labels {
+	font-size: 7vw;
+}
+
+.fields {
+	font-size: 7vw;
+}
+
+input {
+	background-color: #B5E2FA;
+
+}

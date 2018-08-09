@@ -32,30 +32,34 @@ export class LoginForm extends React.Component {
 				)}>
 				<h1 className="page-title">Login</h1>
 				{error}
-				<label htmlFor="username" className="fields-and-labels">Username</label>
+				<label htmlFor="username" className="labels">Username</label>
 				<Field
-					className="fields-and-labels"
+					className="fields"
 					component={Input}
 					type="text"
 					name="username"
 					id="username"
 					validate={[required, nonEmpty]}
 				/>
-				<label htmlFor="password" className="fields-and-labels">Password</label>
+				<label htmlFor="password" className="labels">Password</label>
 				<Field
-					className="fields-and-labels"
+					className="fields"
 					component={Input}
 					type="password"
 					name="password"
 					id="password"
 					validate={[required, nonEmpty]}
 				/>
-				<button className="login-form-button" disabled={this.props.pristine || this.props.submitting}>
-					Login
-				</button>
-				<span className="login-signup-span">Need an account? 
-					<Link to="/signup" className="signup-link">Signup</Link>
-				</span>
+				<div className="submit-button">
+					<button className="login-form-button" disabled={this.props.pristine || this.props.submitting}>
+						Login
+					</button>
+				</div>
+				<div className="signup-link">
+					<span className="login-signup-span">Need an account? 
+						<Link to="/signup" className="signup-link">Signup</Link>
+					</span>
+				</div>
 				<div className="demo-account">
 					<span>Username: </span>
 					<span>Password: </span>
