@@ -29,40 +29,46 @@ export class SignupForm extends React.Component {
                     this.onSubmit(values)
                 )}>
                 <h1 className="page-title">Signup</h1>
-                <label className="fields-and-labels" htmlFor="firstName">First name</label>
-                <Field className="fields-and-labels" component={LoginInput} type="text" name="firstName" />
-                <label className="fields-and-labels" htmlFor="lastName">Last name</label>
-                <Field className="fields-and-labels" component={LoginInput} type="text" name="lastName" />
-                <label className="fields-and-labels" htmlFor="bio">Bio</label>
-                <Field className="fields-and-labels" component={LoginInput} type="text" name="bio" />
-                <label className="fields-and-labels" htmlFor="email">Email</label>
-                <Field className="fields-and-labels" component={LoginInput} type="email" name="email" />
-                <label className="fields-and-labels" htmlFor="username">Username</label>
+                <label className="labels" htmlFor="firstName">First name</label>
+                <Field className="fields" component={LoginInput} type="text" name="firstName" />
+                <label className="labels" htmlFor="lastName">Last name</label>
+                <Field className="fields" component={LoginInput} type="text" name="lastName" />
+                <label className="labels" htmlFor="bio">Bio</label>
+                <Field className="fields" component={LoginInput} type="text" name="bio" />
+                <label className="labels" htmlFor="email">Email</label>
+                <Field className="fields" component={LoginInput} type="email" name="email" />
+                <label className="labels" htmlFor="username">Username</label>
                 <Field
-                    className="fields-and-labels"
+                    className="fields"
                     component={LoginInput}
                     type="text"
                     name="username"
                     validate={[required, nonEmpty, isTrimmed]}
                 />
-                <label className="fields-and-labels" htmlFor="password">Password</label>
+                <label className="labels" htmlFor="password">Password</label>
                 <Field
-                    className="fields-and-labels"
+                    className="fields"
                     component={LoginInput}
                     type="password"
                     name="password"
                     validate={[required, passwordLength, isTrimmed]}
                 />
-                <label className="fields-and-labels" htmlFor="passwordConfirm">Confirm password</label>
+                <label className="labels" htmlFor="passwordConfirm">Confirm Password</label>
                 <Field
-                    className="fields-and-labels"
+                    className="fields"
                     component={LoginInput}
                     type="password"
                     name="passwordConfirm"
                     validate={[required, nonEmpty, matchesPassword]}
                 />
-                <button className="signup-form-button blue push_button" type="submit" disabled={this.props.pristine || this.props.submitting}>Register</button>
-                <span className="login-signup-span">Already have an account?   <Link to="/login" className="register-link">Login</Link></span>
+                <div>
+                    <button className="signup-form-button" type="submit" disabled={this.props.pristine || this.props.submitting}>Register</button>
+                </div>
+                <div>
+                    <span className="login-signup-span">Already have an account?&nbsp;&nbsp;
+                        <Link to="/login" className="register-link">Login</Link>
+                    </span>
+                </div>
             </form>
         );
     }

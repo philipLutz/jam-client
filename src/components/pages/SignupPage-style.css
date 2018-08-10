@@ -1,0 +1,43 @@
+.signup-page {
+	background-color: #F7A072;
+	height: 100vh;
+	text-align: center;
+}
+
+h1 {
+	font-size: 13vw;
+	padding-top: 7vw;
+}
+
+.labels {
+	font-size: 7vw;
+}
+
+.fields {
+	font-size: 7vw;
+}
+
+input {
+	background-color: #B5E2FA;
+	padding: 1vw;
+	border-radius: 2vw;
+	width: 31vw;
+	height: 6.5vw;
+	font-size: 6vw;
+}
+
+.signup-form-button {
+	font-size: 7vw;
+	color: black;
+	background-color: #0FA3B1;
+	padding: 2vw;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	margin: 3vw;
+	border-radius: 2vw;
+	border: none;
+}
+
+.login-signup-span {
+	font-size: 6vw;
+}
