@@ -56,13 +56,18 @@ export class LoginForm extends React.Component {
 					</button>
 				</div>
 				<div className="signup-link">
-					<span className="login-signup-span">Need an account? 
+					<span className="login-signup-span">Need an account?&nbsp;&nbsp;
 						<Link to="/signup" className="signup-link">Signup</Link>
 					</span>
 				</div>
 				<div className="demo-account">
-					<span>Username: </span>
-					<span>Password: </span>
+					<h5>Demo Account</h5>
+					<div>
+						<span>Username: TestUser</span>
+					</div>
+					<div>
+						<span>Password: 1234512345</span>
+					</div>
 				</div>
 			</form>
 		);
