@@ -22,9 +22,10 @@ export class WelcomeSection extends React.Component {
 		}
 		return (
 			<section className="welcome">
+				<img src="https://corandemphotography.files.wordpress.com/2011/01/punchbrothers121210_65.jpg" />
 				<div className="title-container">
 					<h1 className="title">Jam</h1>
-					<h3 className="sub-title">{dialog}</h3>
+					<h3 className="dialog">{dialog}</h3>
 				</div>
 				<div className="buttons">{buttons}</div>
 			</section>

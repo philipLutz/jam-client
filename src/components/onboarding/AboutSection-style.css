@@ -1,5 +1,8 @@
 .about-section {
 	background-color: #F7A072;
+	position: absolute;
+	width: 100%;
+	padding-top: 7vh;
 }
 
 .title-about {

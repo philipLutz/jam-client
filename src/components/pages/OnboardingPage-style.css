@@ -4,19 +4,12 @@
 }
 
 .image {
-	background-image: url("https://corandemphotography.files.wordpress.com/2011/01/punchbrothers121210_65.jpg");
+	/*background-image: url("https://corandemphotography.files.wordpress.com/2011/01/punchbrothers121210_65.jpg");
 	background-size: contain;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;*/
 	color: #B5E2FA;
 	height: 120vh;
 	text-align: center;
-}
-
-.image h1 {
-	position: absolute;
-	top: 17vw;
-	left: 11vw;
-	font-size: 19vw;
 }
 
 h3 {
@@ -34,7 +27,7 @@ h3 {
 }
 
 .features {
-	height: 110vh;
+	height: 130vh;
 	text-align: center;
 }
 

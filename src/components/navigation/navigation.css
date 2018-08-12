@@ -5,10 +5,16 @@
 
 .navbar {
 	background-color: #B5E2FA;
+	height: 7vh;
 }
 
 .navbar button {
 	background-color: #0FA3B1;
+	border-radius: 1vw;
+	border-style: none;
+	padding: 1vh;
+	margin: 1vh;
+	font-size: 2.5vh;
 }
 
 .navbar a:link {
@@ -22,3 +28,28 @@
 .navbar a:hover {
 	color: #F7A072;
 }
+
+.navigation {
+	display: inline;
+}
+
+.navigation-items {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	display: inline;
+}
+
+.logo {
+	font-size: 6vh;
+	position: absolute;
+	left: 1vw;
+}
+
+
+

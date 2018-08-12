@@ -33,11 +33,11 @@ export class Navbar extends React.Component {
 				<button><Link to="/addForm">Host a Jam</Link></button>
 			);
 			jamButton = (
-				<div className="logo"><Link className="logo" to="/board">Jam</Link></div>
+				<div className="logo"><Link className="logo" to="/board"><i><b>Jam</b></i></Link></div>
 			);
 		} else {
 			jamButton = (
-				<div className="logo"><Link className="logo" to="/home">Jam</Link></div>
+				<div className="logo"><Link className="logo" to="/home"><i><b>Jam</b></i></Link></div>
 			);
 			loginButton = (
 				<button><Link to="/login">Login</Link></button>

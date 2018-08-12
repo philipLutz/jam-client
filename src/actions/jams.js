@@ -139,11 +139,3 @@ export const deleteJam = (id) => (dispatch, getState) => {
 		})
 		.catch(err => dispatch(getJamError(err.message)));
 };
-
-
-
-
-
-
-
-

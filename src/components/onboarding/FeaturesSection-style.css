@@ -23,3 +23,8 @@ li {
 .button-container {
 	font-size: 7vw;
 }
+
+.features-section {
+	position: absolute;
+	width: 100%;
+}
