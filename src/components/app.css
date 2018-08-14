@@ -12,28 +12,6 @@
 	background-color: #B5E2FA;
 }
 
-.jam-results {
-	background-color: #B5E2FA;
-	width: 20vw;
-	padding: 1vw;
-	margin: 1vw;
-	border-color: #0FA3B1;
-	border-width: 3px;
-}
-
-.jam-container {
-	margin: 1px;
-	text-align: center;
-	border-color: #0FA3B1;
-	border-radius: 3px;
-}
-
-.jam-results ul {
-	list-style-type: none;
-	text-align: center;
-	padding: 0;
-}
-
 #nav-container {
 	position: fixed;
 	top: 0;
