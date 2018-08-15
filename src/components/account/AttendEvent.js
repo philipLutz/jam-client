@@ -19,11 +19,19 @@ export function AttendEvent({
 		<section className="jam-results">
 			<div className="jam-container">
 				<h3 className="style">{style}</h3>
-				<ul className="jam-time">
-					<li><Moment format="MMMM-D-YYYY">{jamDate}</Moment></li>
-					<li>{jamTime}</li>
-					<li>{location}</li>
-					<li>{instruments}</li>
+				<ul>
+					<li className="time">
+						<div><i><b>When?</b></i></div>
+						<div><Moment format="MMMM-D-YYYY">{jamDate}</Moment> at {jamTime}</div>
+					</li>
+					<li className="location">
+						<div><i><b>Where?</b></i></div>
+						<div>{location}</div>
+					</li>
+					<li className="instruments">
+						<div><i><b>What to bring?</b></i></div>
+						<div>{instruments}</div>
+					</li>
 				</ul>
 			</div>
 		</section>

@@ -14,18 +14,39 @@ export class AddJamForm extends React.Component {
   render() {
 
     return (
-      <div>
+      <section className="add-jam-form">
+          <h3>Host a Jam</h3>
            <form onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
-            <label htmlFor="jamDate">Date</label>
-            <Field name="jamDate" id="jamDate" type="text" component={renderDatePicker} />
-            <label htmlFor="jamTime">Time</label>
-            <Field name="jamTime" id="jamTime" type="text" component="input" />
-            <label htmlFor="style">Style</label>
-            <Field name="style" id="style" type="text" component="input" />
-            <label htmlFor="location">Location</label>
-            <Field name="location" id="location" type="text" component="input" />
-            <label htmlFor="instruments">Instruments</label>
-            <Field name="instruments" id="instruments" type="text" component="input" />
+            <div>
+              <label className="labels" htmlFor="style">Style</label>
+            </div>
+            <div>
+              <Field className="fields" name="style" id="style" type="text" component="input" />
+            </div>
+            <div>
+              <label className="labels" htmlFor="location">Location</label>
+            </div>
+            <div>
+              <Field className="fields" name="location" id="location" type="text" component="input" />
+            </div>
+            <div>
+              <label className="labels" htmlFor="instruments">Instruments</label>
+            </div>
+            <div>
+              <Field className="fields" name="instruments" id="instruments" type="text" component="input" />
+            </div>
+            <div>
+              <label className="labels" htmlFor="jamTime">Time</label>
+            </div>
+            <div>
+              <Field className="fields" name="jamTime" id="jamTime" type="text" component="input" />
+            </div>
+            <div>
+              <label className="labels" htmlFor="jamDate">Date</label>
+            </div>
+            <div className="fields">
+              <Field name="jamDate" id="jamDate" type="text" component={renderDatePicker} />
+            </div>
             <button
                 type="submit"
                 disabled={
@@ -35,7 +56,7 @@ export class AddJamForm extends React.Component {
                 Create Jam
             </button>
           </form>
-      </div>
+      </section>
     )
   }
 }

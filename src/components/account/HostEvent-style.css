@@ -1,0 +1,54 @@
+.style {
+	position: static;
+}
+
+.jam-results {
+	width: 100vw;
+	padding-top: 8vh;
+	padding-bottom: 1vh;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.jam-container {
+	background-color: #B5E2FA;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	border-width: 0.3vw;
+	border-style: solid;
+	border-color: #0FA3B1;
+	border-radius: 3vw;
+	width: 73vw;
+}
+
+.jam-results ul {
+	list-style-type: none;
+	text-align: center;
+	padding: 0;
+}
+
+.jam-container li {
+	padding: 1vw;
+}
+
+
+.jam-container button {
+	background-color: #0FA3B1;
+	color: black;
+	border-radius: 1vw;
+	border-style: none;
+	padding: 3vw;
+	margin: 6vw;
+	font-size: 2.5vh;
+}
+
+.jam-container a {
+	color: black;
+}
+
+.jam-container h3 {
+	padding-top: 3vw;
+	margin-top: 3vw;
+	margin-bottom: 3vw;
+}

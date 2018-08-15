@@ -1,0 +1,19 @@
+* {
+	text-align: center;
+}
+
+.add-jam-form h3 {
+	position: static;
+}
+
+.add-jam-form button {
+	font-size: 6vw;
+	color: black;
+	background-color: #0FA3B1;
+	padding: 1vw;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	margin: 3vw;
+	border-radius: 2vw;
+	border: none;
+}

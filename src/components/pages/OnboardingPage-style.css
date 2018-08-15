@@ -4,9 +4,6 @@
 }
 
 .image {
-	/*background-image: url("https://corandemphotography.files.wordpress.com/2011/01/punchbrothers121210_65.jpg");
-	background-size: contain;
-	background-repeat: no-repeat;*/
 	color: #B5E2FA;
 	height: 120vh;
 	text-align: center;
@@ -41,15 +38,15 @@ a {
 }
 
 a:link {
-	color: #B5E2FA;
+	color: #0FA3B1;
 }
 
 a:visited {
-	color: #B5E2FA;
+	color: #0FA3B1;
 }
 
 a:hover {
-	color: #0FA3B1;
+	color: #B5E2FA;
 }
 
 

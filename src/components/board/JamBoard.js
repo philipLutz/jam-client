@@ -39,7 +39,7 @@ export class JamBoard extends React.Component {
 								/>
 						</section>
 					);
-				}	
+				}
 			}
 		})
 		if (this.props.loading) {
@@ -64,16 +64,12 @@ export class JamBoard extends React.Component {
 			)
 		}
 		else {
-			
 			return (
 				<div>
 					{newJam}
 				</div>
 			);
 		}
-		return (
-			<div></div>
-		);
 	} 
 }
 
