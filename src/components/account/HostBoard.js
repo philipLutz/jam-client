@@ -59,11 +59,6 @@ export class HostBoard extends React.Component {
 				</div>
 			)
 		}
-		return (
-			<div>
-				
-			</div>
-		)
 	} 
 }
 
