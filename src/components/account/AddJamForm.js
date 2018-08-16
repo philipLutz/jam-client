@@ -44,8 +44,8 @@ export class AddJamForm extends React.Component {
             <div>
               <label className="labels" htmlFor="jamDate">Date</label>
             </div>
-            <div className="fields">
-              <Field name="jamDate" id="jamDate" type="text" component={renderDatePicker} />
+            <div>
+              <Field className="fields" name="jamDate" id="jamDate" type="text" component={renderDatePicker} />
             </div>
             <button
                 type="submit"

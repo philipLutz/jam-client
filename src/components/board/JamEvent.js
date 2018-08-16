@@ -34,6 +34,10 @@ export function JamEvent({
 						<div><i><b>What to bring?</b></i></div>
 						<div>{instruments}</div>
 					</li>
+					<li className="host">
+						<div><i><b>Host:</b></i></div>
+						<div>{userHost}</div>
+					</li>
 				</ul>
 				<button
 					className="attend-jam"

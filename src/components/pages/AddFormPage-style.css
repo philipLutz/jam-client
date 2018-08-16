@@ -4,16 +4,16 @@
 
 .add-jam-form h3 {
 	position: static;
+	padding-top: 8vh;
+	padding-bottom: 1vh;
 }
 
 .add-jam-form button {
-	font-size: 6vw;
+	font-size: 7vw;
 	color: black;
 	background-color: #0FA3B1;
-	padding: 1vw;
-	padding-top: 1vw;
-	padding-bottom: 1vw;
-	margin: 3vw;
+	padding: 2vw;
+	margin: 6vw;
 	border-radius: 2vw;
 	border: none;
 }

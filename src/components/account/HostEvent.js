@@ -16,6 +16,8 @@ export function HostEvent({
 	dispatch,
 	props
 }) {
+	let peopleInterestedRaw = attendees.toString();
+	let peopleInterested = peopleInterestedRaw.replace(/,/g, ", ");
 	return (
 		<section className="jam-results">
 			<div className="jam-container">
@@ -32,6 +34,10 @@ export function HostEvent({
 					<li className="instruments">
 						<div><i><b>What to bring?</b></i></div>
 						<div>{instruments}</div>
+					</li>
+					<li className="attendees">
+						<div><i><b>People Interested:</b></i></div>
+						<div>{peopleInterested}</div>
 					</li>
 				</ul>
 				<button
