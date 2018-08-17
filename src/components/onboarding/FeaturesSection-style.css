@@ -5,10 +5,10 @@
 	background-repeat: no-repeat;
 	color: #B5E2FA;
 	text-align: center;
-	height: 60vw;
+	height: 80vw;
 }
 
-ul {
+.features-section ul {
 	list-style-type: none;
 	padding-left: 0;
 	color: black;
@@ -27,4 +27,16 @@ li {
 .features-section {
 	position: absolute;
 	width: 100%;
+	background-color: #F7A072;
+}
+
+@media only screen and (min-width: 770px) {
+	.
+
+	.features-container {
+		background-color: #F7A072;
+		position: absolute;
+		bottom: 0;
+	}
+
 }

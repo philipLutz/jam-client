@@ -17,3 +17,23 @@
 	border-radius: 2vw;
 	border: none;
 }
+
+@media only screen and (min-width: 770px) {
+	.add-jam-form h3 {
+		position: static;
+		padding-top: 8vh;
+		padding-bottom: 1vh;
+		font-size: 6vw;
+		margin: 0;
+	}
+
+	.add-jam-form button {
+		font-size: 3vw;
+		color: black;
+		background-color: #0FA3B1;
+		padding: 1vw;
+		margin: 3vw;
+		border-radius: 1vw;
+		border: none;
+	}
+}

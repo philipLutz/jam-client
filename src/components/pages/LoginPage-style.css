@@ -49,8 +49,60 @@ input {
 
 h5 {
 	font-size: 7vw;
+	margin-bottom: 3vw;
 }
 
 .demo-account {
 	font-size: 6vw;
+}
+
+@media only screen and (min-width: 770px) {
+	h1 {
+		font-size: 6vw;
+		padding: 0;
+		margin-bottom: 0.5vw;
+	}
+
+	.labels {
+		font-size: 2vw;
+	}
+
+	.fields {
+		font-size: 2vw;
+	}
+
+	input {
+		background-color: #B5E2FA;
+		padding: 0.5vw;
+		border-radius: 2vw;
+		width: 17vw;
+		height: 2.5vw;
+		font-size: 2vw;
+	}
+
+	.login-form-button {
+		font-size: 2vw;
+		color: black;
+		background-color: #0FA3B1;
+		padding: 1vw;
+		padding-top: 0.5vw;
+		padding-bottom: 0.5vw;
+		margin: 1vw;
+		border-radius: 2vw;
+		border: none;
+	}
+
+	.signup-link {
+		font-size: 2vw;
+	}
+
+	h5 {
+		font-size: 3vw;
+		margin-bottom: 1vw;
+	}
+
+	.demo-account {
+		font-size: 2vw;
+	}
+
 }

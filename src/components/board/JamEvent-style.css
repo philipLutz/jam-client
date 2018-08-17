@@ -1,5 +1,8 @@
 .style {
 	position: static;
+	padding-top: 3vw;
+	margin-top: 3vw;
+	margin-bottom: 3vw;
 }
 
 .jam-results {
@@ -47,8 +50,62 @@
 	color: black;
 }
 
-.jam-container h3 {
-	padding-top: 3vw;
-	margin-top: 3vw;
-	margin-bottom: 3vw;
+@media only screen and (min-width: 770px) {
+	.style {
+		position: static;
+		font-size: 5vw;
+		margin: 0;
+		padding: 0;
+	}
+
+	.jam-board {
+		width: 32vw;
+		display: inline-block;
+	}
+
+	.jam-results {
+		width: 32vw;
+		padding-top: 8vh;
+		padding-bottom: 1vh;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.jam-container {
+		background-color: #B5E2FA;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		border-width: 0.1vw;
+		border-style: solid;
+		border-color: #0FA3B1;
+		border-radius: 3vw;
+		width: 28vw;
+		font-size: 3vh;
+	}
+
+	.jam-results ul {
+		list-style-type: none;
+		text-align: center;
+		padding: 0;
+	}
+
+	.jam-container li {
+		padding: 1vw;
+	}
+
+
+	.jam-container button {
+		background-color: #0FA3B1;
+		color: black;
+		border-radius: 1vw;
+		border-style: none;
+		padding: 1vw;
+		margin: 1vw;
+		font-size: 3vh;
+	}
+
+	.jam-container a {
+		color: black;
+	}
 }

@@ -18,7 +18,7 @@ export class HostBoard extends React.Component {
 		this.props.dispatch(getAttendJams(this.state.username));
 	}
 	render() {
-		let userHost = this.props.jams.map((jam) => {
+		let userHostEvents = this.props.jams.map((jam) => {
 			if (jam.userHost === this.props.loggedIn.username) {
 				return (
 					<section className="jam-board" key={String(jam._id)}>
@@ -29,6 +29,23 @@ export class HostBoard extends React.Component {
 						/>
 					</section>
 				);
+			}
+		})
+		let userHostEmpty = this.props.jams.map((jam) => {
+			let jamArray = [];
+			console.log(jamArray)
+			if (jam.userHost === this.props.loggedIn.username) {
+				jamArray.push(jam);
+				if (jamArray.length === 0) {
+					return (
+						<div className="empty">
+							<div>You have not created any Jams</div>
+						</div>
+					);
+				}
+				else {
+					return (<div></div>);
+				}
 			}
 		})
 		if (this.props.loading) {
@@ -45,7 +62,7 @@ export class HostBoard extends React.Component {
 				</div>
 			)
 		};
-		if (this.props.empty === true || this.props.jams.length === 0) {
+		if (this.props.empty || this.props.jams.length === 0) {
 			return (
 				<div className="empty">
 					<div>You have not created any Jams</div>
@@ -55,7 +72,8 @@ export class HostBoard extends React.Component {
 		else {
 			return (
 				<div>
-					{userHost}
+					{userHostEvents}
+					{userHostEmpty}
 				</div>
 			)
 		}

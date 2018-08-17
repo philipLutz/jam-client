@@ -23,3 +23,24 @@
 	margin: 3vw;
 	background-color: #F7A072;
 }
+
+@media only screen and (min-width: 770px) {
+	.title-about {
+		background-image: url("https://evolutionatl.files.wordpress.com/2017/06/img_3400.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: #B5E2FA;
+		text-align: center;
+		height: 63vw;
+		font-size: 9vw;
+		padding: 0;
+		margin: 0;
+	}
+
+	.about-content {
+		font-size: 3vw;
+		padding: 2vw;
+		margin: 2vw;
+		background-color: #F7A072;
+	}
+}

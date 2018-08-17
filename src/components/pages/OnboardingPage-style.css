@@ -49,6 +49,40 @@ a:hover {
 	color: #B5E2FA;
 }
 
+@media only screen and (min-width: 770px) {
+	.image {
+	color: #B5E2FA;
+	width: 100vh;
+	text-align: center;
+}
+
+h2 {
+	position: static;
+	bottom: 17vh;
+	width: 100%;
+	font-size: 13vw;
+	color: black;
+}
+
+.buttons {
+	position: absolute;
+	bottom: 23vh;
+	width: 100%;
+}
+
+.features {
+	height: 150vh;
+	text-align: center;
+	background-color: #F7A072;
+
+}
+
+.about {
+	height: 100vh;
+	text-align: center;
+}
+}
+
 
 
 
