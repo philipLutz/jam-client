@@ -6,5 +6,11 @@
 }
 
 @media only screen and (min-width: 770px) {
-	
+	.account-page h3 {
+		position: static;
+		padding-top: 8vh;
+		padding-bottom: 1vh;
+		font-size: 6vw;
+		margin: 0;
+	}
 }

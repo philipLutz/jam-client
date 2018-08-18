@@ -40,13 +40,13 @@ export class AttendBoard extends React.Component {
 		}
 		else {
 			return (
-				<section className="jam-board">
-					{this.props.jams.map(obj => (
+				<section className="attend-board">
+					{this.props.jams.map(jam => (
 						<AttendEvent
-							{...obj}
+							{...jam}
 							dispatch={this.props.dispatch}
 							props={this.props}
-							key={String(obj._id)}
+							key={String(jam._id)}
 						/>
 					))}
 				</section>

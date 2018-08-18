@@ -16,29 +16,31 @@ export function AttendEvent({
 	props
 }) {
 	return (
-		<section className="jam-results">
-			<div className="jam-container">
-				<h3 className="style">{style}</h3>
-				<ul>
-					<li className="time">
-						<div><i><b>When?</b></i></div>
-						<div><Moment format="MMMM-D-YYYY">{jamDate}</Moment> at {jamTime}</div>
-					</li>
-					<li className="location">
-						<div><i><b>Where?</b></i></div>
-						<div>{location}</div>
-					</li>
-					<li className="instruments">
-						<div><i><b>What to bring?</b></i></div>
-						<div>{instruments}</div>
-					</li>
-					<li className="host">
-						<div><i><b>Host:</b></i></div>
-						<div>{userHost}</div>
-					</li>
-				</ul>
+		<div className="jam-board">
+			<div className="jam-results">
+				<div className="jam-container">
+					<h3 className="style">{style}</h3>
+					<ul>
+						<li className="time">
+							<div><i><b>When?</b></i></div>
+							<div><Moment format="MMMM-D-YYYY">{jamDate}</Moment> at {jamTime}</div>
+						</li>
+						<li className="location">
+							<div><i><b>Where?</b></i></div>
+							<div>{location}</div>
+						</li>
+						<li className="instruments">
+							<div><i><b>What to bring?</b></i></div>
+							<div>{instruments}</div>
+						</li>
+						<li className="host">
+							<div><i><b>Host:</b></i></div>
+							<div>{userHost}</div>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</section>
+		</div>
 	);
 }
 
