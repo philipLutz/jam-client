@@ -2,8 +2,6 @@ import React from 'react';
 import { reduxForm, Field } from 'redux-form';
 import { newJam } from '../../actions/jams';
 import { renderDatePicker } from '../../commons/renderDatePicker';
-import './AddJamForm-style.css'
-
 
 export class AddJamForm extends React.Component {
 

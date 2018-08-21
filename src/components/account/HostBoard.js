@@ -1,5 +1,4 @@
 import React from 'react';
-import './HostBoard-style.css';
 import { connect } from 'react-redux';
 import { getAttendJams } from '../../actions/jams';
 import HostEvent from './HostEvent';

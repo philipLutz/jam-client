@@ -1,5 +1,4 @@
 import React from 'react';
-import './AttendBoard-style.css';
 import { connect } from 'react-redux';
 import { getAttendJams } from '../../actions/jams';
 import AttendEvent from './AttendEvent';
