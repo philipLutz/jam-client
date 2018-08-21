@@ -4,8 +4,9 @@
 
 .add-jam-form h3 {
 	position: static;
-	padding-top: 8vh;
-	padding-bottom: 1vh;
+	padding-top: 2vh;
+	padding-bottom: 0;
+	margin-bottom: 2vh;
 }
 
 .add-jam-form button {

@@ -1,8 +1,9 @@
 .style {
 	position: static;
-	padding-top: 3vw;
-	margin-top: 3vw;
-	margin-bottom: 3vw;
+	padding-top: 3vh;
+	margin-top: 0;
+	padding-bottom: 1vh;
+	font-size: 11vw;
 }
 
 .jam-results {
@@ -29,6 +30,7 @@
 	list-style-type: none;
 	text-align: center;
 	padding: 0;
+	font-size: 5vw;
 }
 
 .jam-container li {
@@ -88,6 +90,7 @@
 		list-style-type: none;
 		text-align: center;
 		padding: 0;
+		font-size: 2vw;
 	}
 
 	.jam-container li {

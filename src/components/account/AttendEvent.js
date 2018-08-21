@@ -19,7 +19,7 @@ export function AttendEvent({
 		<div className="jam-board">
 			<div className="jam-results">
 				<div className="jam-container">
-					<h3 className="style">{style}</h3>
+					<h5 className="style">{style}</h5>
 					<ul>
 						<li className="time">
 							<div><i><b>When?</b></i></div>
