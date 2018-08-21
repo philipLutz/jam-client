@@ -31,23 +31,6 @@ export class HostBoard extends React.Component {
 				);
 			}
 		})
-		let userHostEmpty = this.props.jams.map((jam) => {
-			let jamArray = [];
-			console.log(jamArray)
-			if (jam.userHost === this.props.loggedIn.username) {
-				jamArray.push(jam);
-				if (jamArray.length === 0) {
-					return (
-						<div className="empty">
-							<div>You have not created any Jams</div>
-						</div>
-					);
-				}
-				else {
-					return (<div></div>);
-				}
-			}
-		})
 		if (this.props.loading) {
 			return (
 				<div className="loading">
@@ -73,7 +56,6 @@ export class HostBoard extends React.Component {
 			return (
 				<div>
 					{userHostEvents}
-					{userHostEmpty}
 				</div>
 			)
 		}
