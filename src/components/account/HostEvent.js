@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Moment from 'react-moment';
 import { deleteJam } from '../../actions/jams';
-import './HostEvent-style.css';
 
 export function HostEvent({
 	userHost,

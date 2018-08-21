@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import './BoardPage-style.css';
 import JamBoard from '../board/JamBoard';
 
 export class BoardPage extends React.Component {

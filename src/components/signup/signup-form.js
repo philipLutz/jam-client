@@ -7,8 +7,6 @@ import { login } from '../../actions/auth';
 import LoginInput from '../../commons/login-input';
 import { required, nonEmpty, matches, length, isTrimmed } from '../../validators';
 
-import './signup-form-style.css';
-
 const passwordLength = length({ min: 10, max: 72 });
 const matchesPassword = matches('password');
 
