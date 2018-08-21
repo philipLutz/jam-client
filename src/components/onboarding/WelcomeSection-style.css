@@ -7,9 +7,12 @@
 }
 
 .learn-more-button {
-	font-size: 8vw;
+	font-size: 7vw;
 	margin: 2vw;
 	padding: 2vw;
+	background-color: rgba(247, 160, 114, 0.8);
+	border-style: round;
+	border-radius: 2vw;
 }
 
 img {
@@ -28,28 +31,30 @@ img {
 	padding: 0;
 }
 
-.dialog {
-	position: absolute;
-	bottom: 19vh;
-}
-
 @media only screen and (min-width: 770px) {
 	img {
 		width: 100%;
 	}
 
 	.title {
-	position: absolute;
-	top: 9vw;
-	left: 7vw;
-	font-size: 13vw;
-	margin: 0;
-	padding: 0;
+		position: absolute;
+		top: 9vw;
+		left: 7vw;
+		font-size: 13vw;
+		margin: 0;
+		padding: 0;
 	}
 
-	.dialog {
-		position: absolute;
+	.login-button {
+		font-size: 5vw;
+		padding: 1vw;
+		margin: 1vw;
+	}
 
+	.learn-more-button {
+		font-size: 5vw;
+		padding: 1vw;
+		margin: 1vw;
 	}
 
 

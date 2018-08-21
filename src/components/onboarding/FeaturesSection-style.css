@@ -1,11 +1,21 @@
-.title-features {
+.features-section {
+	position: absolute;
+	width: 100%;
+}
+
+h4 {
+	margin: 0;
 	font-size: 13vw;
-	background-image: url("https://s3.amazonaws.com/allaboutjazz/media/large/7/c/1/39b5449acb3c5b7303fd418e76d00.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
+	z-index: 2;
 	color: #B5E2FA;
 	text-align: center;
-	height: 80vw;
+	position: absolute;
+	width: 100%;
+	top: 6vh;
+}
+
+img .features-section {
+	z-index: 0;
 }
 
 .features-section ul {
@@ -24,19 +34,48 @@ li {
 	font-size: 7vw;
 }
 
-.features-section {
+
+
+.features-container {
 	position: absolute;
 	width: 100%;
-	background-color: #F7A072;
+	top: 61vh;
+	z-index: 1;
+	background-color: rgba(247, 160, 114, 1);
 }
 
 @media only screen and (min-width: 770px) {
-	.
+	.features-section {
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
+		height: 200vh;
+	}
 
 	.features-container {
-		background-color: #F7A072;
 		position: absolute;
-		bottom: 0;
+		display: block;
+		width: 100%;
+		top: 37vh;
+		background-color: rgba(0,0,0, 0);
+	}
+
+	h4 {
+		text-align: center;
+		width: 100%;
+		margin-top: 6vh;
+	}
+
+	li {
+		font-size: 2.5vw;
+		background-color: rgba(247, 160, 114, 0.8);
+		margin-left: 28vw;
+		margin-right: 28vw;
+	}
+
+	li a {
+		font-size: 3vw;
 	}
 
 }
