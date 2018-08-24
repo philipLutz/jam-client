@@ -24,7 +24,9 @@ Jam is a web application created to connect musicians who are interested in meet
 - MongoDB
 - JSON Web Tokens
 - Passport
-<br />(Server Repository can be found here: [Jam Server](https://github.com/philipLutz/jam-api))
+<br /> 
+<br />
+Server Repository can be found here: [Jam Server](https://github.com/philipLutz/jam-api)
 
 ### Testing and Deployment
 - Enzyme
