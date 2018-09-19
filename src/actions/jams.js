@@ -135,7 +135,7 @@ export const deleteJam = (id) => (dispatch, getState) => {
 		}
 	})
 		.then(() => {
-			return dispatch(getJams());
+			window.location = '/account';
 		})
 		.catch(err => dispatch(getJamError(err.message)));
 };
